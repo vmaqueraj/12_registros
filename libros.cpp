@@ -13,11 +13,12 @@ struct Libro{
 int main () {
 	int n;
 	Libro libros[100];
-	
+	cout<<"Ingrese la cantidad de libros: ";
 	cin>>n;
+	cin.ignore();
 	
 	for (int i=0; i<n; i++){
-		
+		cout << "\nLibro " << i+1 << endl;
 		getline(cin, libros[i].titulo);
 		getline(cin, libros[i].autor);
 		getline(cin, libros[i].editorial);
