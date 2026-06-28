@@ -42,15 +42,22 @@ int main (){
 	suma = suma + persona[i].edad;
 	}
 	
-	prom = suma/n;
-	
+	cout << endl << "---------------------------------------";
 	cout << endl << "Personas mayores a 50: " << mayores << endl;
+
+	// Promedio de edades de las personas registradas
+	prom = suma/n;
 	cout << "Promedio de edades: " << prom << endl;
 	
-	// promedio de edades
-	
-	
-	// listado completo de personas registradas 
+	cout << "---------------------------------------" << endl;
+	// Listado completo de personas registradas 
+	cout << endl << "Listado completo de personas registradas" << endl;
+	for (int i=0; i<n; i++){
+		cout << endl << "Persona " << i+1 << endl;
+		cout << "Nombres: " << persona[i].nombres << endl;
+		cout << "DNI: " << persona[i].dni << endl;
+		cout << "Edad: " << persona[i].edad << endl;
+	}
 	
 	return 0;
 }
