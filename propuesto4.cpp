@@ -17,6 +17,22 @@ int main (){
 	cin >> n;
 	cin.ignore();
 	
+	for (int i=0; i<n; i++){
+		cout << endl << "Atleta " << i+1 << endl;
+		cout << "Nombres: ";
+		getline(cin, atletas[i].nombres);
+		cout << "Pais: ";
+		getline(cin, atletas[i].pais);
+		cout << "Disciplina: ";
+		getline(cin, atletas[i].disciplina);
+		cout << "Numero de medallas: ";
+		cin >> atletas[i].medallas;
+		cin.ignore();
+	}
+	
+	
+	
+	
 	
 	return 0;
 }
