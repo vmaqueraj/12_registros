@@ -11,11 +11,11 @@ struct Empleado{
 
 int main () {
 	int n;
+	Empleado empleados[100];
 	
-	
-
-	
-	
+	cout << "Ingrese la cantidad de empleados: ";
+	cin >> n;	
+	cin.ignore(); 
 	
 	
 	
