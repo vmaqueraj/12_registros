@@ -45,6 +45,15 @@ int main (){
 	
 	cout << endl << "ATLETAS DEL PAIS " << buscarpais << endl;
 	
+	for (int i=0; i<n; i++){
+		if (atletas[i].pais == buscarpais){
+			cout << endl << "Nombres: " << atletas[i].nombres << endl;
+			cout << "Disciplina: " << atletas[i].disciplina << endl;
+			cout << "Medallas: " << atletas[i].medallas << endl;
+		}
+		
+		
+	}
 	
 	
 	
