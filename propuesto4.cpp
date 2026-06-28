@@ -50,18 +50,33 @@ int main (){
 			cout << endl << "Nombres: " << atletas[i].nombres << endl;
 			cout << "Disciplina: " << atletas[i].disciplina << endl;
 			cout << "Medallas: " << atletas[i].medallas << endl;
+			
+			cont = cont + 1;
+			
+			if (cont == 1){
+				mayor = i;
+			}
+			
+			else if (atletas[i].medallas > atletas[mayor].medallas){
+				mayor = i;
+			}
 		}
-		
-		
 	}
 	
+	cout << endl << "-----------------------------------------------" << endl;
 	
+	if (cont == 0){
+		cout << endl << "No hay atletas resgistrados en ese pais" << endl;
+	}
 	
+	else {
+		cout << endl << "Atleta con mayor numero de medallas en " << buscarpais << endl;
+		cout << "Nombres: " << atletas[mayor].nombres << endl;
+		cout << "Disciplina: " << atletas[mayor].disciplina << endl;
+		cout << "Medallas: " << atletas[mayor].medallas << endl;
+	}
 	
-	
-	
-	
-	
+	cout << endl << "--------------------------------------------------" << endl;
 	
 	return 0;
 }
