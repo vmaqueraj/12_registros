@@ -29,7 +29,23 @@ int main (){
 	}
 	
 	
+	// Personas mayores a 50
+	int mayores, suma;
+	mayores = 0;
+	suma = 0;
 	
+	for (int i=0; i<n; i++){
+		if (persona[i].edad > 50){
+			mayores = mayores + 1;
+		}
+	}
+	
+	cout << "Personas mayores a 50: " << mayores;
+	
+	// promedio de edades
+	
+	
+	// listado completo de personas registradas 
 	
 	return 0;
 }
