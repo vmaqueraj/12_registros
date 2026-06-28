@@ -31,6 +31,7 @@ int main (){
 	
 	// Personas mayores a 50
 	int mayores, suma;
+	float prom;
 	mayores = 0;
 	suma = 0;
 	
@@ -38,9 +39,13 @@ int main (){
 		if (persona[i].edad > 50){
 			mayores = mayores + 1;
 		}
+	suma = suma + persona[i].edad;
 	}
 	
-	cout << "Personas mayores a 50: " << mayores;
+	prom = suma/n;
+	
+	cout << endl << "Personas mayores a 50: " << mayores << endl;
+	cout << "Promedio de edades: " << prom << endl;
 	
 	// promedio de edades
 	
