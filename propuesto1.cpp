@@ -17,7 +17,19 @@ int main () {
 	cin >> n;	
 	cin.ignore(); 
 	
-	
+	for (int i=0; i<n; i++){
+		cout << endl << "Empleado " << i+1 << endl;
+		cout << "Nombres: ";
+		getline(cin, empleados[i].nombres);
+		cout << "Sexo: ";
+		getline(cin, empleados[i].sexo);
+		cout << "Sueldo: ";
+		cin >> empleados[i].sueldo;
+		cin.ignore();
+		
+		
+		
+	}
 	
 	
 	
