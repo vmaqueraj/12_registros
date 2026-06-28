@@ -30,6 +30,26 @@ int main (){
 		cin.ignore();
 	}
 	
+	cout << "----------------------------------------------" << endl;
+	
+	// Buscar por pais
+	string buscarpais;
+	
+	cout << endl << "Ingrese el nombre del pais a consultar: ";
+	getline(cin, buscarpais);
+	
+	// Buscar el atleta con mas medallas dentro del pais
+	int mayor, cont;
+	mayor = 0;
+	cont = 0;
+	
+	cout << endl << "ATLETAS DEL PAIS " << buscarpais << endl;
+	
+	
+	
+	
+	
+	
 	
 	
 	
