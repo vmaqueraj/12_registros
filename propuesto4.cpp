@@ -10,7 +10,12 @@ struct Atleta {
 };
 
 int main (){
+	int n;
+	Atleta atletas[100];
 	
+	cout << "Ingrese la cantidad de atletas a registrar: ";
+	cin >> n;
+	cin.ignore();
 	
 	
 	return 0;
