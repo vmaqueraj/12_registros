@@ -59,6 +59,12 @@ int main (){
 	cout << "Numero: " << empleados[nume].num << endl;
 	cout << "Nombres: " << empleados[nume].nombre << endl;
 	
+	// Incremento de salario
+	for (int i=0; i<n; i++){
+		if (empleados[i].suma > 100){
+			empleados[i].salario = empleados[i].salario + (empleados[i].salario*0.1);
+		}
+	}
 
 
 
