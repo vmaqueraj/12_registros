@@ -98,7 +98,7 @@ int main (){
 					cout << endl << "No hay contactos registrados aun" << endl;
 				} else {
 					cout << endl << "-------- CONTACTOS POR SERVIDOR --------" << endl;
-					cout << "Ingrese el servidor que desee buscar (ej: gmail.com, outlook.com):";
+					cout << "Ingrese el servidor que desee buscar (ej: gmail.com, outlook.com): ";
 					
 					int cont, posArroba;
 					string servidor, servidoremail;
@@ -135,7 +135,29 @@ int main (){
 				break;
 				
 			case 5:
-				
+				if (n==0){
+					cout << endl << "No hay contactos registrados aun" << endl;
+				} else {
+					cout << endl << "-----------  ELIMINAR CONTACTO  ------------" << endl;
+					cout << "Ingrese la posicion del contacto a eliminar (1 al " << n << "): ";
+					
+					int pos;
+					cin >> pos;
+					cin.ignore();
+					
+					if (pos<1 || pos>n){
+						cout << endl << "Posicion no valida" << endl;
+					} else {
+						int ind;
+						ind = pos - 1;
+						
+						for (int i=ind; i<n-1; i++){
+							contactos[i] = contactos[i+1];
+						}
+						n = n - 1;
+						cout << endl << "Contacto eliminado" << endl;
+					}
+				}
 				break;
 				
 			case 6:
