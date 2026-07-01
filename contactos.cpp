@@ -79,8 +79,20 @@ int main (){
 				break;
 				
 			case 3: 
-			
+				if (n == 0){
+					cout << endl << "No hay contactos registrados aun" << endl;
+				} else {
+					cout << endl << "---------  LISTADO GENERAL DE CONTACTOS ----------" << endl;
+					for (int i=0; i<n; i++){
+						cout << endl << "Posicion: " << i+1 << endl;
+						cout << "Nombres: " << contactos[i].nombres << endl;
+						cout << "Sexo: " << contactos[i].sexo << endl;
+						cout << "Edad: " << contactos[i].edad << endl;
+						cout << "Email: " << contactos[i].email << endl;
+					}
+				}
 				break;
+				
 			case 4: 
 			
 				break;
