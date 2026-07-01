@@ -25,37 +25,49 @@ int main (){
 		cout << "5. Eliminar un contacto" << endl;
 		cout << "6. Buscar contacto por email" << endl;
 		cout << "0. Salir" << endl;
-		cout << "=====================================================" << endl;
+		cout << "=================================================" << endl;
 		cout << "Ingrese una opcion: ";
 		cin >> opcion;
 		cin.ignore();
 		
 		
 		switch (opcion){
+			
 			case 1:
-				
+				cout << endl << "----- AGREGAR CONTACTO -----" << endl;
+				cout << "Nombres: ";
+				getline(cin, contactos[n].nombres);
+				cout << "Sexo (M/F): ";
+				getline (cin, contactos[n].sexo);
+				cout << "Edad: ";
+				cin >> contactos[n].edad;
+				cin.ignore();
+				cout << "Email: ";
+				getline(cin, contactos[n].email);
+				n = n + 1;
+				break;
 				
 			case 2: 
 			
-			
+				break;
 			case 3: 
 			
-			
+				break;
 			case 4: 
 			
-			
+				break;
 			case 5:
 				
-				
+				break;
 			case 6:
 				
-			
+				break;
 			case 0:
 				
-			
+				break;
 			default:
 				
-				
+				break;
 		}
 		
 		
