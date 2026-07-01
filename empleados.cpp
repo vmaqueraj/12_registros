@@ -66,11 +66,15 @@ int main (){
 		}
 	}
 
-
-
-
-
-
+	// Ventas inferiores a 30 unidades
+	cout << endl << "EMPLEADOS CON VENTAS INFERIORES A 30 UNIDADES (EN DICIEMBRE)" << endl;
+	for (int i=0; i<n; i++){
+		if (empleados[i].v[11] < 30){
+			cout << "Numero: " << empleados[i].num << endl;
+			cout << "Nombres: " << empleados[i].nombre;
+		}
+	}
+	
 	return 0;
 }
 
