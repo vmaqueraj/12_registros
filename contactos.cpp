@@ -94,17 +94,58 @@ int main (){
 				break;
 				
 			case 4: 
-			
+				if (n==0){
+					cout << endl << "No hay contactos registrados aun" << endl;
+				} else {
+					cout << endl << "-------- CONTACTOS POR SERVIDOR --------" << endl;
+					cout << "Ingrese el servidor que desee buscar (ej: gmail.com, outlook.com):";
+					
+					int cont, posArroba;
+					string servidor, servidoremail;
+					cont = 0;
+					servidoremail = "";
+					getline(cin, servidor);
+					
+					for (int i=0; i<n; i++){
+						posArroba = 0;
+						
+						for (int j=0; j<contactos[i].email.size(); j++){
+							if (contactos[i].email[j] == '@'){
+								posArroba = j;
+							}
+						}
+						
+						for (int j=posArroba+1; j<contactos[i].email.size(); j++){
+							servidoremail = servidoremail + contactos[i].email[j];
+						}
+						
+						if (servidoremail == servidor){
+							cout << endl << "Nombres: " << contactos[i].nombres << endl;
+							cout << "Sexo: " << contactos[i].sexo << endl;
+							cout << "Edad: " << contactos[i].edad << endl;
+							cout << "Email: " << contactos[i].email << endl;
+							cont = cont +1;
+						}
+					}
+					
+					if (cont == 0){
+						cout << endl << "No se encontraron contactos con el servidor buscado" << endl;
+					}
+				}
 				break;
+				
 			case 5:
 				
 				break;
+				
 			case 6:
 				
 				break;
+				
 			case 0:
 				
 				break;
+				
 			default:
 				
 				break;
