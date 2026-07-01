@@ -48,8 +48,36 @@ int main (){
 				break;
 				
 			case 2: 
-			
+				if (n == 0){
+					cout << endl << "No hay contactos registrados aun" << endl;
+				} else {
+					cout << endl << "-------  MODIFICAR CONTACTO  -------" << endl;
+					cout << "Ingrese la posicion del contacto a modificar (1 al " << n << "): ";
+					
+					int pos;
+					cin >> pos;
+					cin.ignore();
+					
+					if (pos<1 || pos>n){
+						cout << endl << "Posicion invalida." << endl;
+					} else {
+						int ind;
+						ind = pos - 1;
+						cout << endl << "Ingrese los nuevos datos" << endl;
+						cout << "Nombres: "; 
+						getline (cin, contactos[ind].nombres);
+						cout << "Sexo (M/F): ";
+						getline(cin, contactos[ind].sexo);
+						cout << "Edad: ";
+						cin >> contactos[ind].edad;
+						cin.ignore();
+						cout << "Email: ";
+						getline(cin, contactos[ind].email);
+						cout << endl << "Contactos modificado" << endl;				
+					}
+				}
 				break;
+				
 			case 3: 
 			
 				break;
