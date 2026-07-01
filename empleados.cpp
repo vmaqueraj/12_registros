@@ -34,6 +34,31 @@ int main (){
 		cin >> empleados[i].salario;
 		cin.ignore();
 	}
+	
+	// Mayores ventas durante el año
+	for (int i=0; i<n; i++){
+		empleados[i].suma = 0;
+		
+		for (int j=0; j<12; j++){
+		empleados[i].suma = empleados[i].suma + empleados[i].v[j];
+		}
+	}
+	
+	int nume, max;
+	max = empleados[0].suma;
+	nume = 0;
+	
+	for (int i=1; i<n; i++){
+		if (empleados[i].suma > max){
+			max = empleados[i].suma;
+			nume = i;
+		}
+	}
+	
+	cout << endl << "EMPLEADO CON MAYORES VENTAS DURANTE EL ANIO" << endl;
+	cout << "Numero: " << empleados[nume].num << endl;
+	cout << "Nombres: " << empleados[nume].nombre << endl;
+	
 
 
 
