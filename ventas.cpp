@@ -97,7 +97,31 @@ int main (){
 			}
 				
 			case 'D': {
-				
+				if (nP == 0){
+					cout << endl << "No hay productos registrados aun" << endl;
+				} else {
+					cout << endl << "--------- ACTUALIZAR PRODUCTO -----------" << endl;
+					cout << "Ingrese la posicion del producto a actualizar (1 al " << nP << "): ";
+					
+					int pos;
+					cin >> pos;
+					cin.ignore();
+					
+					if (pos<1 || pos>nP){
+						cout << endl << "Posicion invalida" << endl;
+					} else {
+						int ind;
+						ind = pos - 1;
+						
+						cout << endl << "Ingrese los nuevos datos:" << endl;
+						cout << "Nombre: ";
+						getline(cin, productos[ind].nombre);
+						cout << "Precio: ";
+						cin >> productos[ind].precio;
+						cin.ignore();
+						cout << endl << "Producto actualizado" << endl;
+					}
+				}
 				
 				break;
 			}
