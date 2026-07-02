@@ -192,7 +192,17 @@ int main (){
 			}
 			
 			case 'G': {
-				
+				if (nV == 0){
+					cout << endl << "No hay ventas registradas aun" << endl;
+				} else {
+					cout << endl << "---------- LISTADO DE VENTAS ------------" << endl;
+					for (int i=0; i<nV; i++){
+						cout << endl << "ID Venta: " << ventas[i].idVenta << endl;
+						cout << "Producto: " << ventas[i].producto << endl;
+						cout << "Cantidad: " << ventas[i].cantidad << endl;
+						cout << "Precio Total: " << ventas[i].precioTotal << endl;
+					}
+				}
 				break;
 			}
 				
