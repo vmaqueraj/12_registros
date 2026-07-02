@@ -40,6 +40,54 @@ int main (){
 		cin >> opcion;
 		cin.ignore();
 		
+		switch (opcion){
+			case 'A':
+				cout << endl << "-------------  REGISTRAR PRODUCTO -------------" << endl;
+				cout << "Nombre: ";
+				getline(cin, productos[nP].nombre);
+				cout << "Precio: ";
+				cin >> productos[nP].precio;
+				cin.ignore();
+				nP = nP + 1;
+				cout << endl << "Producto registrado correctamente" << endl;
+				break;
+				
+			case 'B':
+				
+				break;
+			
+			case 'C':
+				
+				break;
+				
+			case 'D':
+				
+				break;	
+				
+			case 'E':
+				
+				break;
+				
+			case 'F':
+				
+				break;
+			
+			case 'G':
+				
+				break;
+				
+			case 'H':
+				
+				break;
+			
+			case 'S':
+				
+				break;	
+			
+			default:
+				
+				break;
+		}
 		
 		
 	} while (opcion != 'S');
