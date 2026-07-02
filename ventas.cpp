@@ -207,17 +207,26 @@ int main (){
 			}
 				
 			case 'H': {
-				
+				if (nV == 0){
+					cout << endl << "No hay ventas registradas aun" << endl;
+				} else {
+					float total = 0;
+					for (int i=0; i<nV; i++){
+						total= total + ventas[i].precioTotal;
+					}
+					cout << endl << "------------ TOTAL DE VENTAS --------------" << endl;
+					cout << "Total general de ventas: " << total << endl;
+				}
 				break;
 			}
 			
 			case 'S': {
-				
+				cout << endl << "Saliendo del programa..." << endl;
 				break;
 			}	
 			
 			default:
-				
+				cout << endl << "Opcion no valida, elija una opcion del menu" << endl;
 				break;
 		}
 		
