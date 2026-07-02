@@ -122,12 +122,33 @@ int main (){
 						cout << endl << "Producto actualizado" << endl;
 					}
 				}
-				
 				break;
 			}
 				
 			case 'E': {
-				
+				if (nP == 0){
+					cout << endl << "No hay productos registrados aun" << endl;
+				} else {
+					cout << endl << "----------- ELIMINAR PRODUCTO ------------" << endl;
+					cout << "Ingrese la posicion del producto a eliminar (1 al " << nP << "): ";
+					
+					int pos;
+					cin >> pos;
+					cin.ignore();
+					
+					if(pos<1 || pos>nP){
+						cout << endl << "Posicion invalida" << endl;
+					} else{
+						int ind;
+						ind = pos - 1;
+						
+						for (int i=ind; i<nP-1; i++){
+							productos[i] = productos[i+1];
+						}
+						nP = nP - 1;
+						cout << endl << "Producto eliminado" << endl;
+					}
+				}
 				break;
 			}
 				
