@@ -41,7 +41,7 @@ int main (){
 		cin.ignore();
 		
 		switch (opcion){
-			case 'A':
+			case 'A': {
 				cout << endl << "-------------  REGISTRAR PRODUCTO -------------" << endl;
 				cout << "Nombre: ";
 				getline(cin, productos[nP].nombre);
@@ -51,10 +51,21 @@ int main (){
 				nP = nP + 1;
 				cout << endl << "Producto registrado correctamente" << endl;
 				break;
-				
-			case 'B':
-				
+			}
+			
+			case 'B': {
+				if (nP == 0){
+					cout << endl << "No hay productos registrados aun" << endl;
+				} else {
+					cout << endl << "----------- LISTADO DE PRODUCTOS -----------" << endl;
+					for (int i=0; i<nP; i++){
+						cout << endl << "Posicion: " << i+1 << endl;
+						cout << "Nombre: " << productos[i].nombre << endl;
+						cout << "Precio: " << productos[i].precio << endl;
+					}
+				}
 				break;
+			}
 			
 			case 'C':
 				
