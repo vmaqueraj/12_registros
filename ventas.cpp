@@ -153,7 +153,41 @@ int main (){
 			}
 				
 			case 'F': {
-				
+				if (nP == 0){
+					cout << endl << "No hay productos registrados" << endl;
+				} else {
+					cout << endl << "------------ REGISTRAR VENTA -------------" << endl;
+					cout << "Ingrese el nombre del producto vendido: ";
+					string nombreProducto;
+					getline(cin, nombreProducto);
+					
+					int posProducto;
+					posProducto = -1;
+					
+					for (int i=0; i<nP; i++){
+						if (productos[i].nombre == nombreProducto){
+							posProducto = i;
+						}
+					}
+					
+					if (posProducto == -1){
+						cout << endl << "Producto no encontrado. No se puede registrar la venta" << endl;
+					} else {
+						cout << "Cantidad: ";
+						int cantidad;
+						cin >> cantidad;
+						cin.ignore();
+						
+						ventas[nV].idVenta = nV + 1;
+						ventas[nV].producto = nombreProducto;
+						ventas[nV].cantidad = cantidad;
+						ventas[nV].precioTotal = cantidad * productos[posProducto].precio;
+						
+						nV = nV + 1;
+						
+						cout << endl << "Venta registrada correctamente" << endl;
+					}
+				}
 				break;
 			}
 			
