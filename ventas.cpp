@@ -67,33 +67,65 @@ int main (){
 				break;
 			}
 			
-			case 'C':
+			case 'C': {
+				if (nP == 0){
+					cout << endl << "No hay productos registrados aun" << endl;
+				} else {
+					cout << endl << "------------ BUSCAR PRODUCTO -------------" << endl;
+					cout << "Ingrese el nombre del producto a buscar: ";
+					
+					string nombrebuscar;
+					getline(cin, nombrebuscar);
+					
+					int cont;
+					cont = 0;
+					
+					for (int i=0; i<nP; i++){
+						if (productos[i].nombre == nombrebuscar){
+							cout << endl << "Producto encontrado en la posicion: " << i+1 << endl;
+							cout << "Nombre: " << productos[i].nombre << endl;
+							cout << "Precio: " << productos[i].precio << endl;
+							cont = cont + 1;
+						}
+					}
+					
+					if (cont == 0){
+						cout << endl << "No se encontro ningun producto con ese nombre" << endl;
+					}
+				}	
+				break;
+			}
+				
+			case 'D': {
+				
 				
 				break;
+			}
 				
-			case 'D':
-				
-				break;	
-				
-			case 'E':
+			case 'E': {
 				
 				break;
+			}
 				
-			case 'F':
+			case 'F': {
 				
 				break;
+			}
 			
-			case 'G':
+			case 'G': {
 				
 				break;
+			}
 				
-			case 'H':
+			case 'H': {
 				
 				break;
+			}
 			
-			case 'S':
+			case 'S': {
 				
-				break;	
+				break;
+			}	
 			
 			default:
 				
