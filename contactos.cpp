@@ -161,7 +161,33 @@ int main (){
 				break;
 				
 			case 6:
-				
+				if (n == 0){
+					cout << endl << "No hay contactos registrados aun" << endl;
+				} else {
+					cout << endl << "---------  BUSQUEDA POR GMAIL  ----------" << endl;
+					cout << "Ingrese el email a buscar: ";
+					
+					int cont;
+					string emailbuscar;
+					cont = 0;
+					
+					getline(cin, emailbuscar);
+					
+					for (int i=0; i<n; i++){
+						if (contactos[i].email == emailbuscar){
+							cout << endl << "Contacto encontrado en la posicion: " << i+1 << endl;
+							cout << "Nombres: " << contactos[i].nombres << endl;
+							cout << "Sexo: " << contactos[i].sexo << endl;
+							cout << "Edad: " << contactos[i].edad << endl;
+							cout << "Email: " << contactos[i].email << endl;
+							cont = cont + 1;
+						}
+					}
+					
+					if (cont == 0){
+						cout << endl << "No se encontro ningun contacto con ese email" << endl;
+					}
+				}
 				break;
 				
 			case 0:
