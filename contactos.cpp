@@ -103,12 +103,12 @@ int main (){
 					int cont, posArroba;
 					string servidor, servidoremail;
 					cont = 0;
-					servidoremail = "";
 					getline(cin, servidor);
 					
 					for (int i=0; i<n; i++){
 						posArroba = 0;
-						
+						servidoremail = "";
+							
 						for (int j=0; j<contactos[i].email.size(); j++){
 							if (contactos[i].email[j] == '@'){
 								posArroba = j;
@@ -191,11 +191,11 @@ int main (){
 				break;
 				
 			case 0:
-				
+				cout << endl << "Se saldra del programa..." << endl;
 				break;
 				
 			default:
-				
+				cout << endl << "Opcion incorrecta. Ingrese una opcion valida" << endl;
 				break;
 		}
 		
